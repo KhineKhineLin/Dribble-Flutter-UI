@@ -1,4 +1,4 @@
-# dribble_ui
+# Dribble Flutter UI
 
 A new Flutter project.
 
