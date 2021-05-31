@@ -1,4 +1,6 @@
+import 'package:dribble_ui/camera_shop_app/detail_page.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -105,144 +107,164 @@ class _MainPageState extends State<MainPage> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Container(
-                      width: 240,
-                      margin: EdgeInsets.all(24),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(24),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 3,
-                                spreadRadius: 1)
-                          ]),
-                      padding: EdgeInsets.only(top: 32, bottom: 24),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Canon RF Lenses',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22),
-                          ),
-                          Text(
-                            'EF-M to RF adapter design',
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Container(
-                            height: 170,
-                            margin: EdgeInsets.all(16),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: NetworkImage(
-                                          'https://focusnordic.blob.core.windows.net/productimages/116181/800q-116181.png'),
-                                      fit: BoxFit.fitHeight)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                child: DetailPage(),
+                                type: PageTransitionType.bottomToTop));
+                      },
+                      child: Container(
+                        width: 240,
+                        margin: EdgeInsets.all(24),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(24),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 3,
+                                  spreadRadius: 1)
+                            ]),
+                        padding: EdgeInsets.only(top: 32, bottom: 24),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Canon RF Lenses',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22),
                             ),
-                          ),
-                          Text(
-                            '\$544.99',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          Text(
-                            '2mm sharter flange back\ndistance 20mm',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 11, color: Colors.grey),
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Container(
-                            height: 38,
-                            width: 120,
-                            decoration: BoxDecoration(
-                                color: Colors.yellow,
-                                borderRadius: BorderRadius.circular(24)),
-                            child: Center(
-                              child: Text(
-                                'Buy',
-                                style: TextStyle(fontWeight: FontWeight.bold),
+                            Text(
+                              'EF-M to RF adapter design',
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Container(
+                              height: 170,
+                              margin: EdgeInsets.all(16),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://focusnordic.blob.core.windows.net/productimages/116181/800q-116181.png'),
+                                        fit: BoxFit.fitHeight)),
                               ),
                             ),
-                          )
-                        ],
+                            Text(
+                              '\$544.99',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            ),
+                            Text(
+                              '2mm sharter flange back\ndistance 20mm',
+                              textAlign: TextAlign.center,
+                              style:
+                                  TextStyle(fontSize: 11, color: Colors.grey),
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Container(
+                              height: 38,
+                              width: 120,
+                              decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: Center(
+                                child: Text(
+                                  'Buy',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      width: 240,
-                      margin: EdgeInsets.all(24),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(24),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
-                                blurRadius: 3,
-                                spreadRadius: 1)
-                          ]),
-                      padding: EdgeInsets.only(top: 32, bottom: 24),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Canon RF Lenses',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22),
-                          ),
-                          Text(
-                            'EF-M to RF adapter design',
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Container(
-                            height: 170,
-                            margin: EdgeInsets.all(16),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: NetworkImage(
-                                          'https://www.canonrumors.co/wp-content/uploads/2020/09/canon-cinema-eos-c70.png'),
-                                      fit: BoxFit.fitHeight)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            PageTransition(
+                                child: DetailPage(),
+                                type: PageTransitionType.bottomToTop));
+                      },
+                      child: Container(
+                        width: 240,
+                        margin: EdgeInsets.all(24),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(24),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black.withOpacity(0.1),
+                                  blurRadius: 3,
+                                  spreadRadius: 1)
+                            ]),
+                        padding: EdgeInsets.only(top: 32, bottom: 24),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Canon RF Lenses',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22),
                             ),
-                          ),
-                          Text(
-                            '\$455.99',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          Text(
-                            '3mm sharter flange black\ndistance 25mm',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 11, color: Colors.grey),
-                          ),
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Container(
-                            height: 38,
-                            width: 120,
-                            decoration: BoxDecoration(
-                                color: Colors.yellow,
-                                borderRadius: BorderRadius.circular(24)),
-                            child: Center(
-                              child: Text(
-                                'Buy',
-                                style: TextStyle(fontWeight: FontWeight.bold),
+                            Text(
+                              'EF-M to RF adapter design',
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Container(
+                              height: 170,
+                              margin: EdgeInsets.all(16),
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            'https://www.canonrumors.co/wp-content/uploads/2020/09/canon-cinema-eos-c70.png'),
+                                        fit: BoxFit.fitHeight)),
                               ),
                             ),
-                          )
-                        ],
+                            Text(
+                              '\$455.99',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20),
+                            ),
+                            Text(
+                              '3mm sharter flange black\ndistance 25mm',
+                              textAlign: TextAlign.center,
+                              style:
+                                  TextStyle(fontSize: 11, color: Colors.grey),
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Container(
+                              height: 38,
+                              width: 120,
+                              decoration: BoxDecoration(
+                                  color: Colors.yellow,
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: Center(
+                                child: Text(
+                                  'Buy',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     )
                   ],
