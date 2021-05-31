@@ -24,13 +24,18 @@ class _DetailPageState extends State<DetailPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Container(
-                        height: 42,
-                        width: 42,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(8)),
-                        child: Icon(Icons.arrow_back_ios),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Container(
+                          height: 42,
+                          width: 42,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8)),
+                          child: Icon(Icons.arrow_back_ios),
+                        ),
                       ),
                       Text(
                         'Details',
@@ -57,11 +62,90 @@ class _DetailPageState extends State<DetailPage> {
                       top: 0,
                       bottom: 0,
                       child: Container(
+                        padding: EdgeInsets.only(left: 24, right: 24, top: 48),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(32),
                                 topRight: Radius.circular(32))),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'GoPro Superior',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 28),
+                                ),
+                                Icon(Icons.favorite, color: Colors.red)
+                              ],
+                            ),
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              'Gopro rose to prominence',
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16),
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Container(
+                              height: 240,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          'https://www.canonrumors.co/wp-content/uploads/2020/09/canon-cinema-eos-c70.png'),
+                                      fit: BoxFit.fitHeight)),
+                            ),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  height: 32,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                      color: Colors.blueGrey[50],
+                                      borderRadius: BorderRadius.circular(15)),
+                                  child: Center(
+                                    child: Text(
+                                      'White',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 12,
+                                ),
+                                Container(
+                                  height: 32,
+                                  width: 80,
+                                  decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      borderRadius: BorderRadius.circular(16)),
+                                  child: Center(
+                                    child: Text(
+                                      'Black',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       )),
                   Positioned(
                       left: 0,
