@@ -1,3 +1,4 @@
+import 'package:dribble_ui/camera_shop_app/another_detail_page.dart';
 import 'package:dribble_ui/camera_shop_app/detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -112,7 +113,7 @@ class _MainPageState extends State<MainPage> {
                         Navigator.push(
                             context,
                             PageTransition(
-                                child: DetailPage(),
+                                child: AnotherDetailPage(),
                                 type: PageTransitionType.bottomToTop));
                       },
                       child: Container(
