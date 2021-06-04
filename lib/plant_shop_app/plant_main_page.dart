@@ -1,4 +1,5 @@
 import 'package:dotted_border/dotted_border.dart';
+import 'package:dribble_ui/plant_shop_app/plant_sign_up.dart';
 import 'package:flutter/material.dart';
 
 class PlantMainPage extends StatefulWidget {
@@ -34,16 +35,22 @@ class _PlantMainPageState extends State<PlantMainPage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              height: 54,
-                              width: 42,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(4)),
-                              child: Center(
-                                child: Icon(
-                                  Icons.arrow_back,
-                                  color: Colors.green,
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => PlantSignUpPage()));
+                              },
+                              child: Container(
+                                height: 54,
+                                width: 42,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(4)),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.arrow_back,
+                                    color: Colors.green,
+                                  ),
                                 ),
                               ),
                             ),
