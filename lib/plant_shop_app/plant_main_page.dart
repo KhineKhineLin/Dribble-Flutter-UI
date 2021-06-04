@@ -1,3 +1,4 @@
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
 class PlantMainPage extends StatefulWidget {
@@ -95,20 +96,163 @@ class _PlantMainPageState extends State<PlantMainPage> {
                       right: 0,
                       child: Container(
                         padding: EdgeInsets.only(
-                            left: 24, right: 24, top: 24, bottom: 24),
+                            left: 52, right: 24, top: 32, bottom: 24),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(24),
                                 topRight: Radius.circular(24))),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Expanded(flex: 1, child: Placeholder()),
-                            Expanded(flex: 1, child: Placeholder()),
-                            Expanded(flex: 1, child: Placeholder()),
-                            Expanded(flex: 2, child: Placeholder()),
-                            Expanded(flex: 2, child: Placeholder()),
-                            Expanded(flex: 1, child: Placeholder())
+                            Expanded(
+                                flex: 1,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 1.5,
+                                      width: 28,
+                                      color: Colors.black,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 12),
+                                      child: Text(
+                                        'Best Choice',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    )
+                                  ],
+                                )),
+                            Expanded(
+                                flex: 1,
+                                child: Text(
+                                  'Monstera Deliciosa',
+                                  style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold),
+                                )),
+                            Expanded(
+                                flex: 1,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    '\$12.95',
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                )),
+                            Expanded(
+                                flex: 2,
+                                child: Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    'Get your home holiday read with this\nstatement plant available for a limited time at\na special price.',
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                )),
+                            Expanded(
+                                flex: 2,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          height: double.infinity,
+                                          margin: EdgeInsets.all(4),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                Icons.whatshot,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
+                                              SizedBox(
+                                                width: 4,
+                                              ),
+                                              Text(
+                                                'Medium',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ],
+                                          ),
+                                        )),
+                                    Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          height: double.infinity,
+                                          margin: EdgeInsets.all(4),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                Icons.brightness_low,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
+                                              SizedBox(
+                                                width: 4,
+                                              ),
+                                              Text(
+                                                '12 sunny',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ],
+                                          ),
+                                        )),
+                                    Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          height: double.infinity,
+                                          margin: EdgeInsets.all(4),
+                                          child: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                Icons.home,
+                                                color: Colors.green,
+                                                size: 18,
+                                              ),
+                                              SizedBox(
+                                                width: 4,
+                                              ),
+                                              Text(
+                                                'Indoor',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ],
+                                          ),
+                                        ))
+                                  ],
+                                )),
+                            Expanded(
+                                flex: 1,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Align(
+                                    alignment: Alignment.centerLeft,
+                                    child: Text(
+                                      '+ Add to favorites',
+                                      style: TextStyle(
+                                          color: Colors.green, fontSize: 12),
+                                    ),
+                                  ),
+                                ))
                           ],
                         ),
                       )),
@@ -116,13 +260,26 @@ class _PlantMainPageState extends State<PlantMainPage> {
                       right: 42,
                       top: 0,
                       child: Container(
-                        height: 58,
-                        width: 120,
+                        height: 54,
+                        width: 110,
                         decoration: BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(4)),
                         child: Row(
-                          children: [],
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Buy',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Icon(
+                              Icons.add_shopping_cart,
+                              color: Colors.white,
+                            )
+                          ],
                         ),
                       )),
                 ],
