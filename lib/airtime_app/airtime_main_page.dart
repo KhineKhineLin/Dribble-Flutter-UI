@@ -145,38 +145,21 @@ class _AirtimeMainPageState extends State<AirtimeMainPage> {
                                 ),
                                 Container(
                                   height: 64,
-                                  width: MediaQuery.of(context).size.width*2,
+                                  width: MediaQuery.of(context).size.width,
                                   child: Row(
                                     children: [
-                                      Stack(
-                                        children: [
-                                          Container(
-                                            height: 35,
-                                            width: 35,
-                                            decoration: BoxDecoration(
-                                                shape: BoxShape.circle,
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        'https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_960_720.jpg'))),
-                                          ),
-                                          Positioned(
-                                            left: 11,
-                                            child: Container(
-                                              height: 35,
-                                              width: 35,
-                                              child: CircleAvatar(
-                                                  backgroundImage: NetworkImage(
-                                                      'https://cdn.pixabay.com/photo/2017/12/22/14/42/girl-3033718_960_720.jpg')),
-                                            ),
-                                          ),
-                                        ],
+                                      CircleAvatar(
+                                        backgroundImage: NetworkImage(
+                                            'https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_960_720.jpg'),
                                       ),
                                       SizedBox(
                                         width: 12,
                                       ),
-                                      Text(
-                                          '6 mutual friends, including Sophia Smith and Josh Martin',
-                                          style: TextStyle(fontSize: 12)),
+                                      Flexible(
+                                        child: Text(
+                                            '6 mutual friends, including Sophia Smith and Josh Martin',
+                                            style: TextStyle(fontSize: 12)),
+                                      ),
                                     ],
                                   ),
                                 )
