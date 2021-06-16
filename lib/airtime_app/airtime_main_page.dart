@@ -48,8 +48,8 @@ class _AirtimeMainPageState extends State<AirtimeMainPage> {
               ),
             ),
             Positioned(
-                top: MediaQuery.of(context).size.height / 5.5,
-                bottom: MediaQuery.of(context).size.height / 6,
+                top: MediaQuery.of(context).size.height / 6.5,
+                bottom: MediaQuery.of(context).size.height / 5.3,
                 left: 0,
                 right: 0,
                 child: Container(
@@ -96,7 +96,7 @@ class _AirtimeMainPageState extends State<AirtimeMainPage> {
                             ),
                           )),
                       Expanded(
-                          flex: 3,
+                          flex: 4,
                           child: Padding(
                             padding: const EdgeInsets.only(left: 16, top: 16),
                             child: Column(
@@ -164,6 +164,50 @@ class _AirtimeMainPageState extends State<AirtimeMainPage> {
                                 )
                               ],
                             ),
+                          )),
+                      Divider(),
+                      Expanded(
+                          flex: 2,
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.markunread_mailbox),
+                                    SizedBox(
+                                      width: 8,
+                                    ),
+                                    Text(
+                                      'Achievements',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      'See all',
+                                      style: TextStyle(color: Colors.grey),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                  flex: 5,
+                                  child: ListView.builder(
+                                    scrollDirection: Axis.horizontal,
+                                    itemBuilder:
+                                        (BuildContext context, int index) {
+                                      return Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: CircleAvatar(
+                                          radius: 38,
+                                        ),
+                                      );
+                                    },
+                                    itemCount: 16,
+                                  ))
+                            ],
                           ))
                     ],
                   ),
@@ -182,6 +226,72 @@ class _AirtimeMainPageState extends State<AirtimeMainPage> {
                           image: NetworkImage(
                               'https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_960_720.jpg'))),
                 )),
+            Positioned(
+                left: 16,
+                right: 0,
+                bottom: 0,
+                child: Container(
+                  height: 120,
+                  decoration: BoxDecoration(),
+                  child: Column(
+                    children: [
+                      Expanded(
+                          flex: 1,
+                          child: Row(
+                            children: [
+                              Icon(Icons.account_circle),
+                              Text('Friends'),
+                              Spacer(),
+                              Text('23'),
+                              Spacer(),
+                              Text(
+                                'See All',
+                                style: TextStyle(color: Colors.grey),
+                              )
+                            ],
+                          )),
+                      Expanded(
+                          flex: 6,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 16, top: 12),
+                                height: 120,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(12)),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 16, top: 12),
+                                height: 120,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(12)),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 16, top: 12),
+                                height: 120,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(12)),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 16, top: 12),
+                                height: 120,
+                                width: 160,
+                                decoration: BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.circular(12)),
+                              )
+                            ],
+                          ))
+                    ],
+                  ),
+                ))
           ],
         ),
       ),
