@@ -102,7 +102,7 @@ class _MainPageState extends State<MainPage> {
                 ],
               )),
           Expanded(
-              flex: 14,
+              flex: 18,
               child: Padding(
                 padding: const EdgeInsets.only(left: 48),
                 child: ListView(

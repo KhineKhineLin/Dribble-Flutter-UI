@@ -175,20 +175,20 @@ class _AnotherDetailPageState extends State<AnotherDetailPage> {
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 18),
+                                      fontSize: 13),
                                 ),
                                 Text(
                                   '\$344.99',
                                   style: TextStyle(
                                       color: Colors.yellow,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 24),
+                                      fontSize: 19),
                                 ),
                                 Text(
                                   '40% OFF',
                                   style: TextStyle(
                                       color: Colors.white.withOpacity(0.5),
-                                      fontSize: 12),
+                                      fontSize: 8),
                                 )
                               ],
                             ),
