@@ -38,72 +38,213 @@ class _JobFinderMainPageState extends State<JobFinderMainPage> {
             SizedBox(
               height: 32,
             ),
-            Text('Designer'),
-            Text('Job'),
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Text(
+                'Designer',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Text(
+                'Job',
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: 32,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 24),
+              child: Row(
+                children: [
+                  Container(
+                    height: 34,
+                    width: 116,
+                    padding: EdgeInsets.only(left: 8),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Yangon'),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.clear),
+                          iconSize: 16,
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  Container(
+                    height: 34,
+                    width: 96,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(8)),
+                    child: Row(
+                      children: [
+                        Text('\$ 40/h'),
+                        IconButton(
+                          padding: EdgeInsets.zero,
+                          onPressed: () {},
+                          icon: Icon(Icons.clear),
+                          iconSize: 16,
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
             SizedBox(
               height: 48,
             ),
-            Row(
-              children: [
-                Container(
-                  height: 34,
-                  width: 108,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Yangon'),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.clear),
-                        iconSize: 16,
-                      )
-                    ],
-                  ),
-                ),SizedBox(width: 16,),
-                Container(
-                  height: 34,
-                  width: 96,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Row(
-                    children: [
-                      Text('\$ 40/h'),
-                      IconButton(
-                        padding: EdgeInsets.zero,
-                        onPressed: () {},
-                        icon: Icon(Icons.clear),
-                        iconSize: 16,
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),SizedBox(height: 48,),
             Container(
               height: 240,
               width: double.infinity,
-              color: Colors.blueGrey,
+              margin: EdgeInsets.only(left: 24),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('For you'),
+                  Text(
+                    'For you',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
                   Container(
                     height: 200,
-                    color: Colors.red,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
                         Container(
-                          width: MediaQuery.of(context).size.width/2,
+                          width: MediaQuery.of(context).size.width / 2,
+                          margin: EdgeInsets.only(right: 16),
                           decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(8)
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(8)),
+                          padding: EdgeInsets.only(left: 16, top: 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 48,
+                                    width: 48,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular(4)),
+                                    child: Center(
+                                      child: Text(
+                                        'Uber',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 24,
+                                  ),
+                                  Container(
+                                    height: 32,
+                                    width: 60,
+                                    decoration: BoxDecoration(
+                                        color: Colors.white.withOpacity(0.2),
+                                        borderRadius: BorderRadius.circular(4)),
+                                    child: Center(
+                                      child: Text(
+                                        'Full time',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 52,
+                              ),
+                              Text(
+                                'UI / UX Designer',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 16),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                '\$45/h',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              )
+                            ],
+                          ),
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width / 2,
+                          margin: EdgeInsets.only(right: 16),
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(8)),
+                          padding: EdgeInsets.only(left: 16, top: 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    height: 48,
+                                    width: 48,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey.shade50,
+                                        borderRadius: BorderRadius.circular(4)),
+                                    child: Center(
+                                      child: Text(
+                                        'Google',
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 12),
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 24,
+                                  ),
+                                  Container(
+                                    height: 32,
+                                    width: 60,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey.shade50,
+                                        borderRadius: BorderRadius.circular(4)),
+                                    child: Center(
+                                      child: Text(
+                                        'Full time',
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 12),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 52,
+                              ),
+                              Text(
+                                'Product Designer',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 16),
+                              ),
+                              Text(
+                                '\$60/h',
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 18),
+                              )
+                            ],
                           ),
                         )
                       ],
@@ -112,24 +253,69 @@ class _JobFinderMainPageState extends State<JobFinderMainPage> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 16,
+            ),
             Container(
               height: 240,
+              margin: EdgeInsets.only(right: 24, left: 24),
               width: double.infinity,
-              color: Colors.blue,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Recently Added'),
+                  Text(
+                    'Recently Added',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
                   Container(
-                    height: 218,
-                    color: Colors.green,
-                    child: ListView.builder(itemBuilder: (context,index){
+                    height: 200,
+                    child: ListView.builder(itemBuilder: (context, index) {
                       return Container(
-                        height: 86,
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        height: 80,
                         margin: EdgeInsets.only(bottom: 8),
                         decoration: BoxDecoration(
-                          color: Colors.white
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Row(
+                          children: [
+                            Container(
+                              height: 52,
+                              width: 52,
+                              decoration: BoxDecoration(
+                                  color: Colors.pinkAccent.shade100,
+                                  borderRadius: BorderRadius.circular(8)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Visual Designer',
+                                    style: TextStyle(color: Colors.black),
+                                  ),
+                                  SizedBox(
+                                    height: 4,
+                                  ),
+                                  Text(
+                                    'Airbnb Inc.',
+                                    style: TextStyle(color: Colors.grey),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Spacer(),
+                            Text('\$50/h')
+                          ],
                         ),
                       );
                     }),
